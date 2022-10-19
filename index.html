@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title" id="title-bar">Bookshelf Apps</h1>
+    </header>
+    <main>
+      <section class="input_section">
+        <h2 id="title_form">Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input
+              id="inputBookTitle"
+              type="text"
+              placeholder="Masukkan Judul Buku..."
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input
+              id="inputBookAuthor"
+              type="text"
+              placeholder="Masukkan Penulis Buku..."
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun</label>
+            <input
+              id="inputBookYear"
+              type="number"
+              placeholder="Masukkan Tahun Terbit Buku..."
+              required
+            />
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" type="checkbox" />
+          </div>
+          <button id="bookSubmit" type="submit">
+            Masukkan Buku ke <span>Rak Buku</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="search_section">
+        <h2>Cari Buku</h2>
+        <form id="searchBook">
+          <input
+            id="searchBookTitle"
+            type="text"
+            placeholder="Masukkan Buku Yang Ingin Dicari..."
+          />
+          <button id="searchSubmit" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
+        </form>
+      </section>
+
+      <section class="rak_section">
+        <h2>Rak Buku</h2>
+        <div class="rak_book">
+          <div class="book_shelf">
+            <h2>Belum selesai dibaca</h2>
+
+            <div id="incompleteBookshelfList" class="uncompletedBookList">
+              
+            </div>
+          </div>
+
+          <div class="book_shelf">
+            <h2>Selesai dibaca</h2>
+
+            <div id="completeBookshelfList" class="completedBookList">
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &#169; 2022, Neizar Kevin</p>
+    </footer>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
